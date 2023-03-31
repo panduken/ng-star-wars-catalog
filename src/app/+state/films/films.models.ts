@@ -14,3 +14,10 @@ export interface FilmsEntity {
   edited: string;
   url: string;
 }
+
+export interface FilmsResponse {
+  count: number;
+  next: string;
+  previous: string;
+  results: FilmsEntity[];
+}

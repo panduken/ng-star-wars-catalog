@@ -1,1 +1,3 @@
-<p>films works!</p>
+<div *ngIf="films$ | async as films">
+    {{films[0] | json}}
+</div>
