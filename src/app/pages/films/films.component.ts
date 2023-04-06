@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -8,10 +8,11 @@ import {
 import { Store } from '@ngrx/store';
 import { FilmsActions } from 'src/app/+state/films/films.actions';
 import * as fromFilms from '../../+state/films/films.selectors';
+import { FilmCardComponent } from './components/film-card/film-card.component';
 @Component({
   selector: 'app-films',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FilmCardComponent],
   templateUrl: './films.component.html',
   styleUrls: ['./films.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
